@@ -38,8 +38,10 @@ This toolkit is intended for educational and research purposes only. Users are r
 Follow these steps to set up and run the project.
 
 ### 1. Clone the Repository
+
 ```sh
 git clone [https://github.com/KarakayaBinghamton/X--Twitter--Data-Scraping.git](https://github.com/KarakayaBinghamton/X--Twitter--Data-Scraping.git)
+
 cd X--Twitter--Data-Scraping
 
 
@@ -52,18 +54,22 @@ Bash
 
 export APIFY_TOKEN="your_apify_token_here"
 export BEARER_TOKEN="your_twitter_bearer_token_here"
+
 On Windows (Command Prompt):
 
 Bash
 
 set APIFY_TOKEN="your_apify_token_here"
 set BEARER_TOKEN="your_twitter_bearer_token_here"
+
 3. Install Dependencies
+
 Install all the required Python libraries using the requirements.txt file.
 
 Bash
 
 pip install -r requirements.txt
+
 🛠️ Usage
 Before running a script, ensure you have configured it correctly (e.g., set usernames in scrape_legacy.py or search terms in apify_config.json).
 
@@ -72,16 +78,19 @@ To run the legacy snscrape method:
 Bash
 
 python scrape_legacy.py
+
 To run the Apify cloud scraper:
 
 Bash
 
 python scrape_apify.py
+
 To run the official Twitter API v2 collector:
 
 Bash
 
 python scrape_official_api.py
+
 Each script will save its output as a .csv file in the project directory.
 
 📂 Project Structure
