@@ -81,6 +81,7 @@ Bash
 python scrape_official_api.py
 Each script will save its output as a .csv file in the project directory.
 
+
 📂 Project Structure
 .
 ├── scrape_legacy.py          # Method 1: snscrape
@@ -90,5 +91,7 @@ Each script will save its output as a .csv file in the project directory.
 ├── requirements.txt          # Python library dependencies
 ├── .gitignore                # Files to be ignored by Git
 └── README.md                 # This file
+
+
 📜 License
 This project is licensed under the MIT License.
