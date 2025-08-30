@@ -35,10 +35,13 @@ This toolkit is intended for educational and research purposes only. Users are r
 
 ## 🚀 Getting Started
 
+Follow these steps to set up and run the project.
+
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/KarakayaBinghamton/X--Twitter--Data-Scraping.git
+git clone [https://github.com/KarakayaBinghamton/X--Twitter--Data-Scraping.git](https://github.com/KarakayaBinghamton/X--Twitter--Data-Scraping.git)
 cd X--Twitter--Data-Scraping
+
 
 2. Set Up Environment Variables
 This project requires API keys for the Apify and Official API methods. Store them securely as environment variables.
@@ -80,7 +83,6 @@ Bash
 
 python scrape_official_api.py
 Each script will save its output as a .csv file in the project directory.
-
 
 📂 Project Structure
 .
