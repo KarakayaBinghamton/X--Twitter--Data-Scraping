@@ -1,108 +1,103 @@
-# Twitter Data Toolkit 🐦
+# 🐦 Twitter (X) Data Scraping Toolkit
 
-## 📝 Overview
+## 📖 Overview
+This repository contains a collection of Python scripts designed to collect tweets using **three distinct methods**. It serves as a toolkit for researchers, developers, and data analysts, showcasing different approaches to data acquisition from **X (formerly Twitter)**, each with unique advantages and use cases.  
 
-This project is a collection of Python scripts designed to collect tweet data using three distinct methods. It serves as a toolkit for researchers, developers, and data analysts, showcasing different approaches to data acquisition from X (formerly Twitter), each with its own advantages and use cases.
+⚠️ **Disclaimer:** This project is intended for **educational and research purposes only**. Users must comply with the [X/Twitter Developer Agreement](https://developer.twitter.com/en/developer-terms/agreement-and-policy), [Apify Terms of Service](https://apify.com/terms-of-service), and all applicable laws. Respect user privacy and do not misuse collected data.
 
 ---
 
 ## ✨ Features
-
-This toolkit includes three different collection methods:
-
-1.  **Legacy `snscrape` Method (`scrape_legacy.py`):**
-    * Uses the `snscrape` library to scrape tweets without requiring official API keys.
-    * Represents a powerful technique that was widely used before the 2023 API policy changes.
-    * Ideal for historical analysis or projects that don't have access to the official API.
-
-2.  **Third-Party Apify Platform (`scrape_apify.py`):**
-    * Leverages the Apify platform to run a pre-built cloud scraper.
-    * A robust, scalable solution that offloads the scraping infrastructure to a third-party service.
-    * Requires an Apify account and API token.
-
-3.  **Official X/Twitter API v2 (`scrape_official_api.py`):**
-    * Uses the official Twitter API v2, the most reliable and policy-compliant method for data collection.
-    * Requires a Twitter Developer account and a Bearer Token.
-    * Demonstrates handling pagination, rate limits, and secure credential management.
+- Three independent scraping methods:
+  - **Legacy `snscrape`** — No API keys required, great for historical analysis.
+  - **Apify Platform** — Cloud-based scraper with scalable infrastructure.
+  - **Official Twitter API v2** — Policy-compliant, reliable, supports advanced queries.  
+- Saves results as **CSV files** for easy analysis.  
+- Flexible configuration and simple setup.  
 
 ---
 
-## ⚠️ Ethical Disclaimer
+## ⚙️ Collection Methods
 
-This toolkit is intended for educational and research purposes only. Users are responsible for complying with the X (Twitter) Developer Agreement and Policy, the Apify Terms of Service, and all applicable laws. Respect user privacy and do not misuse the collected data.
+### 1. Legacy `snscrape` (`scrape_legacy.py`)
+- Uses the `snscrape` library (no official API keys needed).  
+- Ideal for historical tweet analysis or when you don’t have API access.  
+- ⚠️ Note: This method may break if Twitter changes its structure.  
+
+### 2. Apify Cloud Scraper (`scrape_apify.py`)
+- Leverages the [Apify](https://apify.com/) platform for scraping at scale.  
+- Requires an **Apify account** and **API token**.  
+- Offloads infrastructure to a third-party service (robust for large jobs).  
+
+### 3. Official Twitter API v2 (`scrape_official_api.py`)
+- Uses the official [Twitter API v2](https://developer.twitter.com/en/docs/twitter-api).  
+- Requires a **Twitter Developer account** and a **Bearer Token**.  
+- Demonstrates handling **pagination, rate limits, and credential management**.  
+- Most reliable and policy-compliant method.  
 
 ---
 
 ## 🚀 Getting Started
 
-Follow these steps to set up and run the project.
-
 ### 1. Clone the Repository
-
-```sh
-git clone [https://github.com/KarakayaBinghamton/X--Twitter--Data-Scraping.git](https://github.com/KarakayaBinghamton/X--Twitter--Data-Scraping.git)
-
+```bash
+git clone https://github.com/KarakayaBinghamton/X--Twitter--Data-Scraping.git
 cd X--Twitter--Data-Scraping
 
 
-2. Set Up Environment Variables
-This project requires API keys for the Apify and Official API methods. Store them securely as environment variables.
+2. Install Dependencies
 
-On macOS or Linux:
+pip install -r requirements.txt
 
-Bash
+
+3. Set Environment Variables
+
+You will need to set credentials for Apify and the Official API methods.
+
+macOS / Linux (bash):
 
 export APIFY_TOKEN="your_apify_token_here"
 export BEARER_TOKEN="your_twitter_bearer_token_here"
 
-On Windows (Command Prompt):
-
-Bash
+Windows (Command Prompt):
 
 set APIFY_TOKEN="your_apify_token_here"
 set BEARER_TOKEN="your_twitter_bearer_token_here"
 
-3. Install Dependencies
+🛠 Usage
 
-Install all the required Python libraries using the requirements.txt file.
+Run one of the scraping methods:
 
-Bash
-
-pip install -r requirements.txt
-
-🛠️ Usage
-Before running a script, ensure you have configured it correctly (e.g., set usernames in scrape_legacy.py or search terms in apify_config.json).
-
-To run the legacy snscrape method:
-
-Bash
+Legacy snscrape:
 
 python scrape_legacy.py
 
-To run the Apify cloud scraper:
 
-Bash
+Apify scraper:
 
 python scrape_apify.py
 
-To run the official Twitter API v2 collector:
 
-Bash
+Official Twitter API v2:
 
 python scrape_official_api.py
 
-Each script will save its output as a .csv file in the project directory.
 
-📂 Project Structure
+👉 Each script will generate a .csv file with the collected tweets in the project directory.
+
+
 .
 ├── scrape_legacy.py          # Method 1: snscrape
 ├── scrape_apify.py           # Method 2: Apify Platform
 ├── scrape_official_api.py    # Method 3: Official API v2
-├── apify_config.json         # Configuration for the Apify script
-├── requirements.txt          # Python library dependencies
-├── .gitignore                # Files to be ignored by Git
-└── README.md                 # This file
+├── apify_config.json         # Apify configuration file
+├── requirements.txt          # Python dependencies
+├── .gitignore                # Ignored files
+└── README.md                 # Project documentation
 
 
 📜 License
+
 This project is licensed under the MIT License.
+
+
